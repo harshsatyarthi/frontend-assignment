@@ -1,69 +1,146 @@
 # React + TypeScript + Vite
+🚀 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small component library built with React, TypeScript, TailwindCSS, and Storybook.
+This project demonstrates reusable UI components — InputField and DataTable — designed with scalability, accessibility, and clean styling in mind.
 
-Currently, two official plugins are available:
+🛠️ Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⚛️ React 18 + Vite
 
-## Expanding the ESLint configuration
+📘 TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎨 TailwindCSS
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📖 Storybook
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+🧪 Vitest + React Testing Library
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🌐 Chromatic (Storybook deployment)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📂 Folder Structure
+react-component-library/
+ ┣ src/
+ ┃ ┣ components/
+ ┃ ┃ ┣ InputField/
+ ┃ ┃ ┃ ┣ InputField.tsx
+ ┃ ┃ ┃ ┣ InputField.stories.tsx
+ ┃ ┃ ┣ DataTable/
+ ┃ ┃ ┃ ┣ DataTable.tsx
+ ┃ ┃ ┃ ┣ DataTable.stories.tsx
+ ┃ ┣ App.tsx
+ ┃ ┣ main.tsx
+ ┃ ┗ index.css
+ ┣ .storybook/
+ ┣ package.json
+ ┣ tailwind.config.cjs
+ ┣ postcss.config.cjs
+ ┗ README.md
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+⚡ Setup Instructions
+1️⃣ Clone Repository
+git clone https://github.com/harshsatyarthi/frontend-assignment.git
+cd frontend-assignment
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Run Dev Server
+npm run dev
+
+
+App runs at → http://localhost:5173
+
+4️⃣ Run Storybook
+npm run storybook
+
+
+Storybook runs at → http://localhost:6006
+
+5️⃣ Deploy Storybook to Chromatic
+npm run chromatic
+
+🎯 Components
+🔹 InputField
+
+A flexible input component with multiple states and variants.
+
+Features
+
+Label, placeholder, helper & error text
+
+Variants → filled, outlined, ghost
+
+Sizes → sm, md, lg
+
+States → disabled, invalid
+
+<InputField
+  label="Username"
+  placeholder="Enter username"
+  helperText="Helper message"
+  variant="outlined"
+  size="md"
+/>
+
+🔹 DataTable
+
+A simple data table with sorting, selection, and states.
+
+Features
+
+Tabular display of typed data
+
+Sorting on columns
+
+Row selection (single/multiple)
+
+Loading & empty states
+
+<DataTable
+  data={users}
+  columns={[
+    { key: "name", title: "Name", dataIndex: "name", sortable: true },
+    { key: "email", title: "Email", dataIndex: "email" },
+  ]}
+  selectable
+  onRowSelect={(rows) => console.log(rows)}
+/>
+
+📝 Approach
+
+I designed this project with scalability and reusability in mind:
+
+Setup: Vite + React + TypeScript for performance and strong typing.
+
+Styling: TailwindCSS for responsive, utility-first design.
+
+InputField: Focused on accessibility (aria-invalid), multiple variants & sizes, error handling.
+
+DataTable: Implemented sorting, selection, loading, and empty states with a clean API.
+
+Documentation: Used Storybook to preview all states, deployed via Chromatic.
+
+Scalability: Component-based folder structure, typed props, easy to extend with more components.
+
+✅ Requirements Met
+
+✔️ TypeScript typing
+✔️ Responsive design with TailwindCSS
+✔️ Accessibility (ARIA attributes)
+✔️ Storybook documentation
+✔️ Example usage
+✔️ Chromatic deployment
+
+
+🔗 Live Storybook
+
+View on Chromatic
+https://68a4e7e12a7e59e819878638-hwathflcvz.chromatic.com/
+
+📸 Preview
+<img width="1366" height="768" alt="Screenshot (252)" src="https://github.com/user-attachments/assets/b237fae4-559d-4a54-b1cb-aed50adb4e1c" />
+
+<img width="1366" height="768" alt="Screenshot (253)" src="https://github.com/user-attachments/assets/ea5a262d-fbf1-418a-a10a-e5a53ea8c96a" />
+
+<img width="1366" height="768" alt="Screenshot (254)" src="https://github.com/user-attachments/assets/b4849cda-d3ff-4ac5-81dd-34a2f09740e0" />
