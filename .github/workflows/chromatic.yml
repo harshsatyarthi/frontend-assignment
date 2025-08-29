@@ -3,11 +3,13 @@ name: Deploy Storybook to Chromatic
 on:
   push:
     branches:
-      - main   # 👈 deploys whenever you push to main
+      - main
+  pull_request:
 
 jobs:
   chromatic-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
