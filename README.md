@@ -137,7 +137,10 @@ Scalability: Component-based folder structure, typed props, easy to extend with 
 🔗 Live Storybook
 
 View on Chromatic
-https://68a4e7e12a7e59e819878638-hwathflcvz.chromatic.com/
+
+(https://img.shields.io/badge/Storybook-Live%20Preview-FF4785?logo=storybook)
+(https://68a4e7e12a7e59e819878638.chromatic.com)
+
 
 📸 Preview
 <img width="1366" height="768" alt="Screenshot (252)" src="https://github.com/user-attachments/assets/b237fae4-559d-4a54-b1cb-aed50adb4e1c" />
