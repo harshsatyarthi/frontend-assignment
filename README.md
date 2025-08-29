@@ -1,3 +1,4 @@
+@@ -1,69 +1,146 @@
 # React + TypeScript + Vite
 🚀 Overview
 
@@ -143,4 +144,8 @@ https://68a4e7e12a7e59e819878638-hwathflcvz.chromatic.com/
 
 <img width="1366" height="768" alt="Screenshot (253)" src="https://github.com/user-attachments/assets/ea5a262d-fbf1-418a-a10a-e5a53ea8c96a" />
 
+<<<<<<< HEAD
 <img width="1366" height="768" alt="Screenshot (254)" src="https://github.com/user-attachments/assets/b4849cda-d3ff-4ac5-81dd-34a2f09740e0" />
+=======
+<img width="1366" height="768" alt="Screenshot (254)" src="https://github.com/user-attachments/assets/b4849cda-d3ff-4ac5-81dd-34a2f09740e0" />
+>>>>>>> 0b2485f (Updated README.md with project details)
